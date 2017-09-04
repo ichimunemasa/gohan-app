@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"start": "node public/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node public/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,7 @@
   },
   "homepage": "https://github.com/CyberGohan/gohan-app#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.15.4"
   }
 }
