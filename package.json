@@ -1,0 +1,22 @@
+{
+  "name": "gohan-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyberGohan/gohan-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyberGohan/gohan-app/issues"
+  },
+  "homepage": "https://github.com/CyberGohan/gohan-app#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
