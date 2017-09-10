@@ -9,7 +9,6 @@ var vote = require('./vote');
 app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'ejs');
 app.use(logger('dev'));
-app.use(bodyParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -5,7 +5,7 @@ exports.index = function(req, res){
   res.send("Test");
 };
 
-//Content-Type: application/json で受け取ります
+//Content-Type: application/json
 /*
 {
   "user" : "taro",
@@ -15,7 +15,6 @@ exports.index = function(req, res){
 */
 exports.record = function(req, res){
   var myrow;
-  // UPDATE member SET num_of_votes_male = num_of_votes_male + 1 WHERE name =
   if(req.body.sex == "male"){
     model.query('UPDATE member SET num_of_votes_male = num_of_votes_male + 1 WHERE name = ?', [req.body.name]);
   }else{
