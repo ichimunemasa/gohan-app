@@ -22,3 +22,8 @@ exports.record = function(req, res){
   }
   res.send(req.body);
 };
+
+
+exports.graph = function(req, res){
+  res.render('../views/graph');
+};
