@@ -21,6 +21,11 @@
 
   * `npm install express --save`  
   * `npm install ejs --save`
+  * `npm install body-parser --save`
+  * `npm install method-override --save`
+  * `npm install morgan --save`
+  * `npm install mysql --save`
+  * `npm install socket.io --save`
   
 * ### ディレクトリの説明
 

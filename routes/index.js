@@ -9,7 +9,6 @@ var http = require('http');
 var server = http.createServer(app);
 var io = require('socket.io').listen(app.listen(process.env.PORT || 3000));
 
-//app.set('views', __dirname + '/views');
 app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
