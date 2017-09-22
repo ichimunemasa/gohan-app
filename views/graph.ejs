@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>投票結果</title>
+</head>
+<body>
+  <div id="chartContainerMale" style="position: fixed; top: 10%; left:10%;width:80%; height:35%;"></div>
+  <div id="chartContainerFemale" style=" position: fixed; top: 60%; left:10%;width:80%; height:35%;"></div>
+
+  <h1>RESULT</h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+  var socket = io.connect();
+  $('document').ready(function(){
+    //console.log("hogehoge")
+    //socket.emit('emit_from_client',"opayo");
+
+    socket.on('show_graph_male', function(data){
+      //console.log(data);
+      var chart_male = new CanvasJS.Chart("chartContainerMale", {
+        title:{
+          text: "MEN"
+        },
+        axisY:{
+          interlacedColor: "#F8F1E4",
+          tickLength: 10,
+          maximum:200
+        },
+        data: [{
+          type: 'column',
+          indexLabelFontSize: 30,
+          dataPoints: data
+        }]
+      });
+      chart_male.render();
+    });
+
+
+    socket.on('show_graph_female', function(data){
+      console.log(data);
+      var chart_female = new CanvasJS.Chart("chartContainerFemale", {
+        title:{
+          text: "LADIES"
+        },
+        axisY:{
+          interlacedColor: "#F8F1E4",
+          tickLength: 10,
+          maximum:200
+        },
+        data: [{
+          type: 'column',
+          indexLabelFontSize: 30,
+          dataPoints: data
+        }]
+      });
+      chart_female.render();
+    });
+
+  });
+  </script>
+</body>
+</html>
