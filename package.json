@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/CyberGohan/gohan-app#readme",
   "dependencies": {
+    "body-parser": "^1.18.0",
     "ejs": "^2.5.7",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "mysql": "*",
+    "socket.io": "^2.0.3"
   }
 }

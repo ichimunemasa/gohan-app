@@ -24,7 +24,8 @@
   
 * ### ディレクトリの説明
 
-  * *public/* の中にjs等のファイルを置く
-  
-  * *views/* の中にはhtml等の表示用のファイルを置く  
-  拡張子はejs
+  * *routes/* の中にnode.jsファイルを置く  
+  * *public/javascript* の中にjsファイルを置く  
+  * *public/stylesheet* の中にcssファイルを置く  
+  * *views/* の中にはhtmlファイルを置く  
+  拡張子はejs
