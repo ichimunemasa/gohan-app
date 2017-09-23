@@ -10,15 +10,20 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(app.listen(process.env.PORT || 3000));
 
 app.set('port', (process.env.PORT || 3000));
+app.set('views', __dirname + '/../views');
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + '/public'));
+
+app.use(express.static(__dirname + '/../public'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', vote.index);
+// app.get('/', 'index');
 app.get('/graph', vote.graph);
 app.post('/record', vote.record);
 
 
 io.sockets.on('connection', graph.showGraph);
+app.get('/', function(request, response) {
+	  response.render('index', {});
+});

@@ -1,10 +1,6 @@
 
 var model = require('../model/vote_db.js');
 
-exports.index = function(req, res){
-  res.send("Test");
-};
-
 //Content-Type: application/json
 /*
 {
@@ -25,5 +21,5 @@ exports.record = function(req, res){
 
 
 exports.graph = function(req, res){
-  res.render('../views/graph');
+  res.render('graph', {});
 };
