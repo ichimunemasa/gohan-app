@@ -1,0 +1,25 @@
+
+* { margin: 0; }
+
+html {
+  height: 5000px;
+}
+body { 
+    height: 90%;
+    background-color: #28CBAC; 
+}
+
+.main{
+    position: relative;
+    background-image: url("../images/background_image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: 40%;
+}
+
+.vote{
+    position: fixed;
+    top: 90%;
+}

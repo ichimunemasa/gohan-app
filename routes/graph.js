@@ -2,6 +2,9 @@
 //    io = require('socket.io').listen(app)
 var model = require('../model/vote_db.js');
 
+exports.index = function(req, res){
+  res.render('graph', {});
+};
 
 exports.showGraph = function(socket){
   setInterval (function(){
@@ -29,6 +32,4 @@ exports.showGraph = function(socket){
       socket.emit('show_graph_female', dataPlotFemale);
     });
   }, 500);
-
-
 };

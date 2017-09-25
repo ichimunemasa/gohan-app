@@ -3,8 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>GAP</title>
+    <link rel="stylesheet" href="../stylesheet/user_select.css">
 </head>
 <body>
-	
+	<% var folder = ['ichi', 'momoka', 'issyuu', 'rei', 'bomi', 'hiruta']; %>
+	<% var users = ['いちのき', 'ももか', 'いっしゅう', 'れい', 'ぼみ', 'ひるた']; %>
+	<% var count = 0; %>
+	<div class="main">
+		<div class="box-vertical">
+			<% for (var i = 0; i < 3; i++) { %>
+				<div class="box-horizontal">
+					<% for (var j = 0; j < 2; j++) { %>
+						<div class="box">
+							<a href="../user/<%= sex %>/<%= users[count] %>">
+								<img src="../images/<%= folder[0] %>/<%= sex %>.JPG" alt="<%= users[count] %>">
+							</a>
+							<p><%= users[count] %></p>
+							<% count = count + 1 %>
+						</div>
+					<% } %>
+				</div>
+			<% } %>
+		</div>
+	</div>
 </body>
 </html>
