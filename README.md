@@ -26,6 +26,8 @@
   * `npm install morgan --save`
   * `npm install mysql --save`
   * `npm install socket.io --save`
+  * `npm install request --save`
+  * `npm install cookie-parser --save`
   
 * ### ディレクトリの説明
 
