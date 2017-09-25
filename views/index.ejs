@@ -4,17 +4,22 @@
     <meta charset="utf-8">
     <title>GAP</title>
     <link rel="stylesheet" href="stylesheet/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="title">
 	    <h1>GAP</h1>
 	</div>
     <script>
-      var title = document.getElementById("title");
-	  var countup = function(){
-	    title.innerHTML = "<h1>ようこそ</h1>";
-	  } 
-	  setTimeout(countup, 2000);
+      var welcome = function(){
+	  	$('#title').html('<h1>ようこそ</h1>');
+	  }
+	  setTimeout(welcome, 2000);
+
+	  var topView = function(){
+	  	window.location.href = 'sex_select';
+	  }
+	  setTimeout(topView, 4000);
 	</script>
 </body>
 </html>

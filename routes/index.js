@@ -21,9 +21,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.get('/', 'index');
 app.get('/graph', vote.graph);
 app.post('/record', vote.record);
-
-
-io.sockets.on('connection', graph.showGraph);
 app.get('/', function(request, response) {
 	  response.render('index', {});
 });
+app.get('/sex_select', function(request, response) {
+	  response.render('sex_select', {});
+});
+app.get('/user_select', function(request, response) {
+	  response.render('user_select', {});
+});
+app.get('/about', function(request, response) {
+	  response.render('about', {});
+});
+io.sockets.on('connection', graph.showGraph);
