@@ -28,6 +28,7 @@
   * `npm install socket.io --save`
   * `npm install request --save`
   * `npm install cookie-parser --save`
+  * `npm install fs --save `
   
 * ### ディレクトリの説明
 
