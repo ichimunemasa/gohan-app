@@ -1,18 +1,12 @@
-var express = require('express');
-var http = require('http');
-
-var app = express();
-var server = http.createServer(app);
-var io = require('socket.io').listen(app.listen(process.env.PORT || 3000));
+//var app = require('http').createServer(handler),
+//    io = require('socket.io').listen(app)
 var model = require('../model/vote_db.js');
 
 exports.index = function(req, res){
   res.render('graph', {});
 };
 
-io.sockets.on('connection', showGraph);
-
-var showGraph = function(socket){
+exports.showGraph = function(socket){
   setInterval (function(){
     model.query('SELECT * FROM member', function(err, rows) {
       var dataPlotMale = [
@@ -37,5 +31,5 @@ var showGraph = function(socket){
       socket.emit('show_graph_male', dataPlotMale);
       socket.emit('show_graph_female', dataPlotFemale);
     });
-  }, 500);
+  }, 1000);
 };
