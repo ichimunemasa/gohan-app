@@ -21,6 +21,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "fs": "0.0.1-security",
     "method-override": "^2.3.9",
     "morgan": "^1.8.2",
     "mysql": "^2.14.1",

@@ -6,18 +6,41 @@
     <link rel="stylesheet" href="../../stylesheet/user.css">
 </head>
 <body>
-	<div class="user">
-	</div>
+	<% var folder = {'いちのき':'ichi', 'ももか':'momoka', 'いっしゅう':'issyuu', 'れい':'rei', 'ぼみ':'bomi', 'ひるた':'hiruta'}; %>
 	<div class="main">
+		<div class="user">
+			<img src="../../images/<%= folder[name] %>/<%= sex %>.JPG" alt="<%= name %>">
+			<p><%= name %></p>
+		</div>
 		<div class="box-vertical">
-			
+			<div class="description" style="text-align: left;">
+				<h1>●得意なこと1</h1>
+				<p><br>ほげほげ<br>ほげほげ<br>ほげほげ<br><br></p>
+				<img src="../../images/<%= folder[name] %>/hobby/<%= sex %>1.JPG" alt="<%= name %>">
+			</div>
+			<div class="description" style="text-align: right;">
+				<h1>●得意なこと2</h1>
+				<p><br>ほげほげ<br>ほげほげ<br>ほげほげ<br><br></p>
+				<img src="../../images/<%= folder[name] %>/hobby/<%= sex %>2.JPG" alt="<%= name %>">
+			</div>
+			<div class="albam">
+				<h1>●アルバム</h1>
+				<div class="images">
+
+					<% files.filter(function(file){
+				        return !(file.indexOf(".DS_Store") > -1);
+				    }).forEach(function(value) { %>
+						<a href="../../images/<%= folder[name] %>/albam/<%= value %>"><img src="../../images/<%= folder[name] %>/albam/<%= value %>" alt="<%= name %>"></a>
+					<% });  %>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="vote">
 		<form action="../../record" method="post">
 			<input type="hidden" name="sex" value="<%= sex %>">
   			<input type="hidden" name="name" value="<%= name %>">
-		  	<button type='submit'>投票する</button>
+		  	<button type='submit'>投票する!</button>
 		</form>
 	</div>
 </body>

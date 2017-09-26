@@ -22,10 +22,10 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/user/:sex/:name', user.index);
-app.get('/graph', graph.index);
 app.post('/record', vote.record);
 
+app.get('/user/:sex/:name', user.index);
+app.get('/graph', graph.index);
 app.get('/', function(request, response) {
 	response.render('index', {});
 });
