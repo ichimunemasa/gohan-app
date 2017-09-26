@@ -6,7 +6,6 @@ var logger = require('morgan');
 var vote = require('./vote');
 var graph = require('./graph');
 var user = require('./user');
-var http = require('http');
 
 var app = express();
 var server = http.createServer(app);
@@ -42,5 +41,3 @@ app.get('/user_select/:sex', function(request, response) {
 app.get('/about', function(request, response) {
 	  response.render('about', {});
 });
-
-io.sockets.on('connection', graph.showGraph);
